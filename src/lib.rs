@@ -4,12 +4,11 @@ use yew::prelude::*;
 pub fn character_sheet() -> Html {
     html! {
         <div class="character-sheet">
-            <div class="name-box">
-                <h1>{"BarBar"}</h1>
-            </div>
+            <img src="images//BarbarName.png" alt="BarBar Name" class="BarBar"/>
             <img src="images//Barbar1.webp" alt="BarBar Smash" class="BarBar"/>
             <div class="info">
-                <p>{"Level: 2 | Class: Barbellian"}</p>
+                <h3>{"Level: 2"}</h3>
+                <h2>{"Class: Barbellian"}</h2>
             </div>
             <div class="stats">
                 <ul>
