@@ -1,0 +1,36 @@
+.character-sheet {
+    width: 1210px;
+    height: 1412px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.name-box {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.BarBar {
+    box-shadow: 4px 4px 5px rgba(204, 116, 57, 0.5);
+    width: 1210px;
+  }
+
+.name-box h1 {
+    margin: 0;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.stats ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.stats li {
+    margin-bottom: 10px;
+}
