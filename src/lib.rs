@@ -1,76 +1,46 @@
 use yew::prelude::*;
 
+// CharacterSheet is a function component that renders the character's information
 #[function_component(CharacterSheet)]
 pub fn character_sheet() -> Html {
+    // Define character stats
+    // i32 is a 32-bit signed integer, suitable for storing character attributes
+    let health = 9;
+    let stamina = 4;
+    let strength = 12;
+    let mobility = 7;
+    let intelligence = 2;
+    let wisdom = 1;
+    let focus = 10;
+
+    // The html! macro is used to create the component's HTML structure
     html! {
+        // Main container for the character sheet
         <div class="character-sheet">
+            // Character name image
             <img src="images//BarbarName.png" alt="BarBar Name" class="BarBar"/>
-            <img src="images//Barbar1.webp" alt="BarBar Smash" class="BarBar"/>
+            // Character main image
+            <img src="images//BarbarMain.webp" alt="BarBar Smash" class="BarBar"/>
+            // Container for character info (level and class)
             <div class="info">
                 <h3>{"Level: 2"}</h3>
                 <h2>{"Class: Barbellian"}</h2>
             </div>
+            // Container for character stats
             <div class="stats">
+                // Unordered list to display stats
                 <ul>
-                    <li>{"Health: 9"}</li>
-                    <li>{"Stamina: 4"}</li>
-                    <li>{"Strength: 12"}</li>
-                    <li>{"Mobility: 7"}</li>
-                    <li>{"Intelligence: 2"}</li>
-                    <li>{"Wisdom: 1"}</li>
-                    <li>{"Focus: 10"}</li>
+                    // List items for each stat
+                    // format! macro is used to combine the stat name and its value
+                    <li>{format!("Health: {}", health)}</li>
+                    <li>{format!("Stamina: {}", stamina)}</li>
+                    <li>{format!("Strength: {}", strength)}</li>
+                    <li>{format!("Mobility: {}", mobility)}</li>
+                    <li>{format!("Intelligence: {}", intelligence)}</li>
+                    <li>{format!("Wisdom: {}", wisdom)}</li>
+                    <li>{format!("Focus: {}", focus)}</li>
                 </ul>
             </div>
         </div>
     }
 }
-
-// Not going with Canvas
-
-// use wasm_bindgen::prelude::*;
-// use web_sys::{HtmlCanvasElement, CanvasRenderingContext2d};
-
-// #[function_component(CharacterSheet)]
-// pub fn character_sheet() -> Html {
-//     let canvas_ref = use_node_ref();
-
-//     use_effect_with_deps(|canvas_ref| {
-//         if let Some(canvas) = canvas_ref.cast::<HtmlCanvasElement>() {
-//             let context = canvas
-//                 .get_context("2d")
-//                 .unwrap()
-//                 .unwrap()
-//                 .dyn_into::<CanvasRenderingContext2d>()
-//                 .unwrap();
-
-//             draw_character_sheet(&context);
-//         }
-//         || ()
-//     }, canvas_ref.clone());
-
-//     html! {
-//         <canvas ref={canvas_ref} width="1280" height="1502" />
-//     }
-// }
-
-// fn draw_character_sheet(ctx: &CanvasRenderingContext2d) {
-//     // Set up basic styles
-//     ctx.set_font("20px Arial");
-//     ctx.set_fill_style(&JsValue::from_str("black"));
-
-//     // Draw character name
-//     ctx.fill_text("BarBar", 50.0, 30.0).unwrap();
-
-//     // Draw level and class
-//     ctx.fill_text("Level: 2 | Class: Barbellian", 10.0, 60.0).unwrap();
-
-//     // Draw stats
-//     let stats: [(&str, i32); 7] = [
-//         ("Health", 9), ("Stamina", 4), ("Strength", 12),
-//         ("Mobility", 7), ("Intelligence", 2), ("Wisdom", 1),
-//         ("Focus", 10)
-//     ];
-//     for (i, (stat, value)) in stats.iter().enumerate() {
-//         ctx.fill_text(&format!("{}: {}", stat, value), 10.0, 150.0 + (i as f64 * 30.0)).unwrap();
-//     }
-// }
