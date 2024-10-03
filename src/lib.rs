@@ -4,14 +4,14 @@ use yew::prelude::*;
 #[function_component(CharacterSheet)]
 pub fn character_sheet() -> Html {
     // Define character stats
-    // i32 is a 32-bit signed integer, suitable for storing character attributes
-    let health = 9;
-    let stamina = 4;
-    let strength = 12;
-    let mobility = 7;
-    let intelligence = 2;
-    let wisdom = 1;
-    let focus = 10;
+    // u8 is an 8-bit unsigned integer, suitable for storing character attributes from 0 to 255
+    let health: u8 = 9;
+    let stamina: u8 = 4;
+    let strength: u8 = 12;
+    let mobility: u8 = 7;
+    let intelligence: u8 = 2;
+    let wisdom: u8 = 1;
+    let focus: u8 = 10;
 
     // The html! macro is used to create the component's HTML structure
     html! {
@@ -31,7 +31,7 @@ pub fn character_sheet() -> Html {
                 // Unordered list to display stats
                 <ul>
                     // List items for each stat
-                    // format! macro is used to combine the stat name and its value
+                    // format! macro is used to combine the stat name and its value. Like an fstring in python.
                     <li>{format!("Health: {}", health)}</li>
                     <li>{format!("Stamina: {}", stamina)}</li>
                     <li>{format!("Strength: {}", strength)}</li>

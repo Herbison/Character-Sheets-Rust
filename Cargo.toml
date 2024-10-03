@@ -1,16 +1,25 @@
+# Cargo.toml: Configuration file for a Rust project named "character-sheet"
+# It's like a package.json file in a node project.
+
 [package]
 name = "character-sheet"
 version = "0.1.0"
 edition = "2021"
 
+# List of dependencies required for the project
 [dependencies]
+# Yew: A modern web framework for creating multi-threaded front-end web apps with WebAssembly
 yew = { version = "0.20", features = ["csr"] }
+# wasm-bindgen: Facilitates high-level interactions between Wasm modules and JavaScript
 wasm-bindgen = "0.2"
+# web-sys: Provides bindings to Web APIs
 web-sys = { version = "0.3", features = ["CanvasRenderingContext2d", "HtmlCanvasElement"] }
 
+# Library configuration
 [lib]
 crate-type = ["cdylib", "rlib"]
 
+# Binary configuration
 [[bin]]
 name = "character-sheet"
 path = "src/main.rs"
