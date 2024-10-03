@@ -18,7 +18,7 @@ pub fn character_sheet() -> Html {
         // Main container for the character sheet
         <div class="character-sheet">
             // Character name image
-            <img src="images//BarbarName.png" alt="BarBar Name" class="BarBar"/>
+            <img src="images//BarbarBanner.png" alt="BarBar Name" class="BarBar"/>
             // Character main image
             <img src="images//BarbarMain.webp" alt="BarBar Smash" class="BarBar"/>
             // Container for character info (level and class)
