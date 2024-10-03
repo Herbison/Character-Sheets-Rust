@@ -1,5 +1,9 @@
 use yew::prelude::*;
 
+// This file (lib.rs) defines the library crate for our project.
+// It is tied to the cargo.toml file.
+// Everything defined here is automatically available to other parts of our project, including main.rs, without needing explicit imports.
+
 // CharacterSheet is a function component that renders the character's information
 #[function_component(CharacterSheet)]
 pub fn character_sheet() -> Html {
