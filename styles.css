@@ -27,13 +27,31 @@ body {
 
 .stats ul {
     list-style-type: none;
-    text-align: center;
     padding: 0;
     margin: 0;
+    width: 300px; /* Adjust as needed */
 }
 
 .stats li {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
     font-size: large;
     font-weight: 800;
+}
+
+.stat-name, .stat-value {
+    border: 2px solid #D2B48C; /* Light brown border */
+    padding: 5px;
+}
+
+.stat-name {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.stat-value {
+    width: 50px; /* Adjust as needed */
+    text-align: center;
 }

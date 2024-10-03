@@ -21,10 +21,8 @@ pub fn character_sheet() -> Html {
     html! {
         // Main container for the character sheet
         <div class="character-sheet">
-            // Character name image
-            <img src="images//BarbarBanner.png" alt="BarBar Name" class="BarBar"/>
             // Character main image
-            <img src="images//BarbarMain.webp" alt="BarBar Smash" class="BarBar"/>
+            <img src="images//BARBAR.webp" alt="BarBar Smash" class="BarBar"/>
             // Container for character info (level and class)
             <div class="info">
                 <h3>{"Level: 2"}</h3>
@@ -36,15 +34,37 @@ pub fn character_sheet() -> Html {
                 <ul>
                     // List items for each stat
                     // format! macro is used to combine the stat name and its value. Like an fstring in python.
-                    <li>{format!("Health: {}", health)}</li>
-                    <li>{format!("Stamina: {}", stamina)}</li>
-                    <li>{format!("Strength: {}", strength)}</li>
-                    <li>{format!("Mobility: {}", mobility)}</li>
-                    <li>{format!("Intelligence: {}", intelligence)}</li>
-                    <li>{format!("Wisdom: {}", wisdom)}</li>
-                    <li>{format!("Focus: {}", focus)}</li>
+                    <li>
+                        <span class="stat-name">{"Health"}</span>
+                        <span class="stat-value">{health}</span>
+                    </li>
+                    <li>
+                        <span class="stat-name">{"Stamina"}</span>
+                        <span class="stat-value">{stamina}</span>
+                    </li>
+                    <li>
+                        <span class="stat-name">{"Strength"}</span>
+                        <span class="stat-value">{strength}</span>
+                    </li>
+                    <li>
+                        <span class="stat-name">{"Mobility"}</span>
+                        <span class="stat-value">{mobility}</span>
+                    </li>
+                    <li>
+                        <span class="stat-name">{"Intelligence"}</span>
+                        <span class="stat-value">{intelligence}</span>
+                    </li>
+                    <li>
+                        <span class="stat-name">{"Wisdom"}</span>
+                        <span class="stat-value">{wisdom}</span>
+                    </li>
+                    <li>
+                        <span class="stat-name">{"Focus"}</span>
+                        <span class="stat-value">{focus}</span>
+                    </li>
                 </ul>
             </div>
         </div>
     }
 }
+
