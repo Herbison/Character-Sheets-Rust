@@ -22,49 +22,69 @@ pub fn character_sheet() -> Html {
         // Main container for the character sheet
         <div class="character-sheet">
             // Character main image
-            <img src="images//BARBAR.webp" alt="BarBar Smash" class="BarBar"/>
-            // Container for character info (level and class)
-            <div class="info">
-                <h3>{"Level: 2"}</h3>
-                <h2>{"Class: Barbellian"}</h2>
-            </div>
+            <img src="images//BARBAR.webp" alt="BarBar Smash" class="BarBarLogo"/>
+
+            <h2 class="class-name">{"Class: Barbellian"}</h2>
+            <img src="images//l2.jpg" alt="BarBar Level" class="BarBarLevel"/>
+
             // Container for character stats
-            <div class="stats">
-                // Unordered list to display stats
-                <ul>
-                    // List items for each stat
-                    // format! macro is used to combine the stat name and its value. Like an fstring in python.
-                    <li>
-                        <span class="stat-name">{"Health"}</span>
-                        <span class="stat-value">{health}</span>
-                    </li>
-                    <li>
-                        <span class="stat-name">{"Stamina"}</span>
-                        <span class="stat-value">{stamina}</span>
-                    </li>
-                    <li>
-                        <span class="stat-name">{"Strength"}</span>
-                        <span class="stat-value">{strength}</span>
-                    </li>
-                    <li>
-                        <span class="stat-name">{"Mobility"}</span>
-                        <span class="stat-value">{mobility}</span>
-                    </li>
-                    <li>
-                        <span class="stat-name">{"Intelligence"}</span>
-                        <span class="stat-value">{intelligence}</span>
-                    </li>
-                    <li>
-                        <span class="stat-name">{"Wisdom"}</span>
-                        <span class="stat-value">{wisdom}</span>
-                    </li>
-                    <li>
-                        <span class="stat-name">{"Focus"}</span>
-                        <span class="stat-value">{focus}</span>
-                    </li>
-                </ul>
+            <div class="character-stats">
+                <div class="stats-column">
+                        <div class="label">{"Stats"}</div>
+                        // Unordered list to display stats
+                        <ul>
+                            // List items for each stat
+                            // format! macro is used to combine the stat name and its value. Like an fstring in python.
+                            <li>
+                                <span class="stat-name">{"Health"}</span>
+                                <span class="stat-value">{health}</span>
+                            </li>
+                            <li>
+                                <span class="stat-name">{"Stamina"}</span>
+                                <span class="stat-value">{stamina}</span>
+                            </li>
+                            <li>
+                                <span class="stat-name">{"Strength"}</span>
+                                <span class="stat-value">{strength}</span>
+                            </li>
+                            <li>
+                                <span class="stat-name">{"Mobility"}</span>
+                                <span class="stat-value">{mobility}</span>
+                            </li>
+                            <li>
+                                <span class="stat-name">{"Intelligence"}</span>
+                                <span class="stat-value">{intelligence}</span>
+                            </li>
+                            <li>
+                                <span class="stat-name">{"Wisdom"}</span>
+                                <span class="stat-value">{wisdom}</span>
+                            </li>
+                            <li>
+                                <span class="stat-name">{"Focus"}</span>
+                                <span class="stat-value">{focus}</span>
+                            </li>
+                        </ul>
+                </div>
+                <div class="abilities-column">
+                        <div class="label">{"Abilities"}</div>
+                        <ul>
+                            <li>
+                                <span class="ability-name">{"Battlecry"}</span>
+                            </li>
+                        </ul>
+                </div>
+                <div class="equipment-column">
+                        <div class="label">{"Equipment"}</div>
+                        <ul>
+                            <li>
+                                <span class="equipment-name">{"AHHH Salts of Nose Removal"}</span>
+                            </li>
+                            <li>
+                                <span class="equipment-name">{"Chalk of Epic Grip"}</span>
+                            </li>
+                        </ul>
+                </div>
             </div>
         </div>
     }
 }
-
