@@ -27,6 +27,8 @@ pub fn character_sheet() -> Html {
             <h2 class="class-name">{"Class: Barbellian"}</h2>
             <img src="images//l2.jpg" alt="BarBar Level" class="BarBarLevel"/>
 
+            <h2 class="class-name">{"Exp: 12/60"}</h2>
+
             // Container for character stats
             <div class="character-stats">
                 <div class="stats-column">
