@@ -84,6 +84,10 @@ pub fn character_sheet() -> Html {
                             <li>
                                 <span class="equipment-name">{"Chalk of Epic Grip"}</span>
                             </li>
+                            // Include bars separately, or as arsenal?
+                            <li>
+                                <span class="equipment-name">{"Yoked Bar"}</span>
+                            </li>
                         </ul>
                 </div>
             </div>
